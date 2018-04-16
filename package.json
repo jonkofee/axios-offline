@@ -1,0 +1,21 @@
+{
+  "name": "axios-offline",
+  "version": "0.0.0",
+  "description": "Store query and repeat",
+  "main": "index.js",
+  "repository": "github:jonkofee/axios-offline.git",
+  "homepage": "https://github.com/jonkofee/axios-offline",
+  "author": "jonkofee <jonkofee@icloud.com>",
+  "keywords": [
+    "axios",
+    "offline",
+    "extensions",
+    "adapter",
+    "store"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "axios": "*",
+    "localforage": "^1.7.1"
+  }
+}
