@@ -2,8 +2,8 @@ import storage from "./plugins/localforage"
 
 export default adapter => {
   return config => {
-    config.timeout = 5000
-
+    config.timeout = config.timeout || 5000
+    
     function storeRequest(data) {
       storage.setItem(String(Date.now()), data)
     }
