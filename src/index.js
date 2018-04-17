@@ -1,7 +1,8 @@
 import localforage from "./plugins/localforage"
 
-export default defaultAdapter => {
-  let storage = localforage();
+export default options => {
+  let { defaultAdapter } = options
+  let storage = localforage(options)
 
   return config => {
     config.timeout = config.timeout || 5000
