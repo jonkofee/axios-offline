@@ -21,7 +21,7 @@ export default adapter => {
     function sendAllRequest() {
       storage.iterate((data, time) => {
         adapter(data)
-          .then(removeRequest(time))
+          .then(() => removeRequest(time))
       })
     }
 
