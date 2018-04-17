@@ -27,7 +27,10 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "preversion": "npm test",
+    "prepublish": "npm run build",
+    "postpublish": "git push --tags"
   },
   "babel": {
     "presets": [
