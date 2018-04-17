@@ -1,8 +1,8 @@
 import localforage from "./plugins/localforage"
 
-export default adapter => {
+export default defaultAdapter => {
   let storage = localforage();
-  
+
   return config => {
     config.timeout = config.timeout || 5000
 
@@ -16,12 +16,12 @@ export default adapter => {
 
     function sendAllRequest() {
       storage.iterate((data, time) => {
-        adapter(data)
+        defaultAdapter(data)
           .then(() => removeRequest(time))
       })
     }
 
-    let response = adapter(config)
+    let response = defaultAdapter(config)
       .catch(err => {
         let {
           code,
