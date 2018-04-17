@@ -1,6 +1,6 @@
 {
   "name": "axios-offline",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Store query and repeat",
   "main": "./dist/main.js",
   "repository": "github:jonkofee/axios-offline.git",
@@ -27,10 +27,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
-    "test": "echo \"Error: no test specified\"",
-    "preversion": "npm test",
-    "prepublish": "npm run build",
-    "postpublish": "git push --tags"
+    "test": "echo \"Error: no test specified\""
   },
   "babel": {
     "presets": [
