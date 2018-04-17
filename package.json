@@ -29,7 +29,7 @@
     "build": "npm run clean && webpack --mode production",
     "test": "echo \"Error: no test specified\"",
     "preversion": "npm test",
-    "version": "npm run build",
+    "prepublish": "npm run build",
     "postpublish": "git push --tags"
   },
   "babel": {
