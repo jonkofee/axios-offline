@@ -30,7 +30,7 @@
     "test": "echo \"Error: no test specified\"",
     "preversion": "npm test",
     "prepublish": "npm run build",
-    "postpublish": "git push --tags"
+    "postpublish": "git push --tags && git push"
   },
   "babel": {
     "presets": [
