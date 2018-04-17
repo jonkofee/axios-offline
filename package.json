@@ -2,7 +2,7 @@
   "name": "axios-offline",
   "version": "1.1.0",
   "description": "Store query and repeat",
-  "main": "index.js",
+  "main": "./dist/main.js",
   "repository": "github:jonkofee/axios-offline.git",
   "homepage": "https://github.com/jonkofee/axios-offline",
   "author": "jonkofee <jonkofee@icloud.com>",
@@ -17,5 +17,24 @@
   "dependencies": {
     "axios": "*",
     "localforage": "^1.7.1"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postpublish": "git push --tags"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
   }
 }
