@@ -1,12 +1,6 @@
-import localForage from "localforage"
+import storage from "./plugins/localforage"
 
 export default adapter => {
-  var storage = localForage.createInstance({
-    name: "axios-stack"
-  })
-
-  storage.setDriver(localForage.LOCALSTORAGE)
-
   return config => {
     config.timeout = 5000
 
