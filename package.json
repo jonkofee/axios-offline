@@ -1,6 +1,6 @@
 {
   "name": "axios-offline",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Store query and repeat",
   "main": "./dist/main.js",
   "repository": "github:jonkofee/axios-offline.git",
