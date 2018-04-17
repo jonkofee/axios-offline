@@ -23,10 +23,11 @@ export default adapter => {
       .catch(err => {
         let {
           code,
-          message
+          message,
+          response
         } = err
 
-        if (code === 'ECONNABORTED' || message === 'Network Error') {
+        if (response === undefined && (code === 'ECONNABORTED' || message === 'Network Error')) {
           storeRequest(config)
         } else {
           sendAllRequest()
