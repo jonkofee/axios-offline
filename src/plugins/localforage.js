@@ -1,9 +1,14 @@
 import localForage from "localforage"
 
-let storage = localForage.createInstance({
-  name: "axios-stack"
-})
+export default ({
+  storageName = "axios-stack",
+  storageDriver = localForage.LOCALSTORAGE
+} = {}) => {
+  let instance = localForage.createInstance({
+    name: storageName
+  })
 
-storage.setDriver(localForage.LOCALSTORAGE)
+  instance.setDriver(storageDriver)
 
-export default storage;
+  return instance
+}

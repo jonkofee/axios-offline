@@ -1,9 +1,11 @@
-import storage from "./plugins/localforage"
+import localforage from "./plugins/localforage"
 
 export default adapter => {
+  let storage = localforage();
+  
   return config => {
     config.timeout = config.timeout || 5000
-    
+
     function storeRequest(data) {
       storage.setItem(String(Date.now()), data)
     }
