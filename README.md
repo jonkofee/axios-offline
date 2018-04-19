@@ -23,11 +23,11 @@ import Axios from 'axios'
 import AxiosOffline from 'axios-offline'
 import LocalForage from "localforage"
 
-let AxiosOfflineAdapter = new AxiosOffline({
+let AxiosOfflineAdapter = AxiosOffline({
   defaultAdapter: Axios.defaults.adapter, //require, basic adapter
   storageName: "axios-offline", //optional, default: "axios-stack"
   storageDriver: LocalForage.LOCALSTORAGE //optional, default: LocalForage.LOCALSTORAGE
-}).getAdapter()
+})
 
 let http = Axios.create({
   adapter: AxiosOfflineAdapter
