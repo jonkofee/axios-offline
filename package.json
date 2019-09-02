@@ -25,12 +25,8 @@
     "webpack-cli": "^2.0.14"
   },
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "npm run clean && webpack --mode production",
-    "test": "echo \"Error: no test specified\"",
-    "preversion": "npm test",
-    "prepublish": "npm run build",
-    "postpublish": "git push --tags && git push"
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\""
   },
   "babel": {
     "presets": [
